@@ -1,0 +1,256 @@
+#WAP_Advanced
+
+def print_string():
+    string = str(input("Enter the string you want to print: "))
+    print(string)
+
+def string_concatenation():
+    string1 = str(input("Enter the first string: "))
+    string2 = str(input("Enter the second string: "))
+    print(string1 + string2)
+
+def echo_string():
+    string = str(input("Enter the string you want to echo: "))
+    no_echo = int(input("Enter the number of times you want to echo the string: "))
+    print(string * no_echo)
+
+def arithmetic_operators():
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    opp = str(input("Enter the operator you want to use: add, subtract, multiply, divide, remainder, exponent, int_divide: "))
+    if opp == "add":
+        print("Addition: ", num1 + num2)
+    elif opp == "subtract":
+        print("Subtraction: ", num1 - num2)
+    elif opp == "multiply":
+        print("Multiplication: ", num1 * num2)
+    elif opp == "divide":
+        print("Division: ", num1 / num2)
+    elif opp == "remainder":
+        print("Remainder: ", num1 % num2)
+    elif opp == "exponent":
+        print("Exponentiation: ", num1 ** num2)
+    elif opp == "int_divide":
+        print("Integer Division: ", num1 // num2)
+
+def area_perimeter_square():
+    side = float(input("Enter the length of the side of the square: "))
+    area = side * side
+    perimeter = 4 * side
+    print("Area of square: ", area)
+    print("Perimeter of square: ", perimeter)
+
+def area_perimeter_rectangle():
+    length = float(input("Enter the length of the rectangle: "))
+    width = float(input("Enter the width of the rectangle: "))
+    area = length * width
+    perimeter = 2 * (length + width)
+    print("Area of rectangle: ", area)
+    print("Perimeter of rectangle: ", perimeter)
+
+def compare_numbers():
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    opp = str(input("Enter the operator you want to use: greater, less, equal: "))
+    if opp == "greater":
+        if num1 > num2:
+            print(f"{num1} is larger than {num2}")
+        if num1 <= num2:
+            print(f"{num1} is not larger than {num2}")
+    elif opp == "less":
+        if num1 < num2:
+            print(f"{num1} is less than {num2}")
+        if num1 >= num2:
+            print(f"{num1} is not less than {num2}")
+    elif opp == "equal":
+        if num1 == num2:
+            print(f"{num1} is equal to {num2}")
+        if num1 != num2:
+            print(f"{num1} is not equal to {num2}")
+
+def logical_operators():
+    while True:
+        number1_a= float(input("Boolean1: Enter the first number: "))
+        number1_b= float(input("Boolean1: Enter the second number: "))
+        opp1 = str(input("Boolean1: Enter the operator you want to use: greater, less, equal: ").lower())
+        if opp1 == "greater":
+            bool1 = number1_a > number1_b
+            break
+        elif opp1 == "less":
+            bool1 = number1_a < number1_b
+            break
+        elif opp1 == "equal":
+            bool1 = number1_a == number1_b
+            break
+        else:
+            print("Invalid operator for Boolean1. Please enter a valid operator.")
+            continue
+
+    while True:        
+        number2_a= float(input("Boolean2: Enter the first number: "))
+        number2_b= float(input("Boolean2: Enter the second number: "))
+        opp2 = str(input("Boolean2: Enter the operator you want to use: greater, less, equal: ").lower())
+        if opp2 == "greater":
+            bool2 = number2_a > number2_b
+            break
+        elif opp2 == "less":
+            bool2 = number2_a < number2_b
+            break
+        elif opp2 == "equal":
+            bool2 = number2_a == number2_b
+            break
+        else:
+            print("Invalid operator for Boolean2. Please enter a valid operator.")
+            continue
+    while True:
+        opp = str(input("Enter the operator you want to use: and, or, not, all: ")).lower()
+
+        if opp == "and":
+            print(f"{number1_a} {opp1} {number1_b} AND {number2_a} {opp2} {number2_b}:", bool1 and bool2)
+
+        elif opp == "or":
+           print(f"{number1_a} {opp1} {number1_b} OR {number2_a} {opp2} {number2_b}:", bool1 or bool2)
+
+        elif opp == "not":
+            print(f"NOT {number1_a} {opp1} {number1_b}: {not bool1}")
+            print(f"NOT {number2_a} {opp2} {number2_b}: {not bool2}")
+
+        elif opp == "all":
+            print(f"{number1_a} {opp1} {number1_b} AND {number2_a} {opp2} {number2_b}:", bool1 and bool2)
+            print(f"{number1_a} {opp1} {number1_b} OR {number2_a} {opp2} {number2_b}:", bool1 or bool2)
+            print(f"NOT {number1_a} {opp1} {number1_b}: {not bool1}")
+            print(f"NOT {number2_a} {opp2} {number2_b}: {not bool2}")
+
+        else:
+            print("Invalid operator. Please enter a valid operator.")
+            continue
+        
+
+def odd_even():
+    num = int(input("Enter a number: "))
+    if num % 2 == 0:
+        print(f"{num} is even.")
+    else:
+        print(f"{num} is odd.")
+
+def positive_negative():
+    num = int(input("Enter a number: "))
+    if num > 0:
+        print(f"{num} is positive.")
+    elif num < 0:
+        print(f"{num} is negative.")
+    else:
+        print(f"{num} is zero.")
+
+def eligible_to_vote():
+    while True:
+        age = int(input("Enter your age: "))
+        if age >= 18:
+            print("You are eligible to vote.")
+            break
+        elif age < 18 and age > 0:
+            print("You are not eligible to vote.")
+            print("Try again in ", 18 - age, " years.")
+            break
+        else:
+            print("Invalid age. Please enter a valid age.")
+        continue
+
+def larger_number():
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    if num1 > num2:
+        print(f"{num1} is larger than {num2}")
+    elif num1 < num2:
+        print(f"{num2} is larger than {num1}")
+    else:
+        print(f"{num1} and {num2} are equal.")
+
+def indent_string():
+    opp = str(input("Enter the operator you want to use slice/index: ").lower())
+    while True:
+        if opp == "slice":
+            string = str(input("Enter the string you want to slice: "))
+            start = int(input("Enter the starting index: "))
+            end = int(input("Enter the ending index: "))
+            print(string[start:end])
+            break
+        elif opp == "index1":
+            string = str(input("Enter the string you want to get character from: "))
+            no_index = int(input("Enter the index of the character you want to get: "))
+            print(string[no_index])
+            break
+        else:
+            print("Invalid operator. Please enter a valid operator.")
+            continue
+
+
+
+
+def function_selection_implementation():  
+    function = str(input("Enter the function you want to perform:\n1-To print string\n2-To concatenate strings\n3-To echo string\n4-To use arithmetic operators\n5-To calculate Area and Perimeter of a Square\n6-To calculate A and P of a Rectangle\n7-To compare numbers\n8-To use logical operators\n9-To find whether number is odd or even\n10-To find whether number is positive or negative\n11-To check eligibility to vote\n12-To find larger number\n13-To perform indentation on a string\n"))
+
+    #WAP 1- To print string
+    if function == "1":
+        print_string()
+
+    #WAP 2- To concatenate strings
+    elif function == "2":
+        string_concatenation()
+
+    # WAP 3- To echo string
+    elif function == "3":
+        echo_string()
+
+
+    # WAP 4- To use all arithmetic operators
+    elif function == "4":
+        arithmetic_operators()
+
+    # WAP 5- To calculate Area and Perimeter of a Square
+    elif function == "5":
+        area_perimeter_square()
+
+    # WAP 6- To calculate A and P of a Rectangle
+    elif function == "6":
+        area_perimeter_rectangle()
+
+    # WAP 7- To compare numbers
+    elif function == "7":
+        compare_numbers()
+
+    # WAP 8- To use logical operators
+    elif function == "8":
+        logical_operators()
+
+    # WAP 9- To find whether no. is odd or even using arithmetic operators
+    elif function == "9":
+        odd_even()
+
+    # WAP 10- To find whether no. is positive or negative
+    elif function == "10":
+        positive_negative()
+
+    # WAP 11- to find whether person is eligible to vote or not
+    elif function == "11":
+        eligible_to_vote()
+
+    # WAP 12- To find larger no. among 2 nos.
+    elif function == "12":
+        larger_number()
+
+    # WAP 13- To perform indentation on a string
+    elif function == "13":
+        indent_string()
+
+    else: 
+        print("Invalid input. Please enter a valid function number.")
+        print("Would you like to try again?")
+
+while True:
+    function_selection_implementation()
+    choice = str(input("Enter 'yes' to continue or 'no' to exit: "))
+    if choice == "no":
+        break
+    if choice == "yes":
+        continue
